@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.po2.jukebox.Controller">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <children>
+      <Label text="JUKEBOX">
+         <font>
+            <Font size="45.0" />
+         </font>
+      </Label>
+      <HBox>
+         <children>
+            <VBox>
+               <children>
+                  <VBox>
+                     <children>
+                        <Label text="Adicionar música">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="20.0" />
+                           </padding>
+                        </Label>
+                        <HBox prefHeight="40.0" prefWidth="572.0">
+                           <children>
+                              <Label prefHeight="27.0" prefWidth="60.0" text="Nome:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="musicName" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="40.0" prefWidth="572.0">
+                           <children>
+                              <Label prefHeight="27.0" prefWidth="60.0" text="Banda:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="musicBandName" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="40.0" prefWidth="572.0">
+                           <children>
+                              <Label prefHeight="27.0" prefWidth="60.0" text="Duração:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="musicDuration" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="40.0" prefWidth="572.0">
+                           <children>
+                              <Label prefHeight="27.0" prefWidth="60.0" text="Link:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="musicLink" />
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label prefHeight="27.0" prefWidth="60.0" text="Quantia:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="musicAmount" text="1" />
+                           </children>
+                        </HBox>
+                        <Button mnemonicParsing="false" onAction="#handleAddMusic" text="Salvar">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="15.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" />
+                     </padding>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <Label text="Adicionar banda">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="20.0" />
+                           </padding>
+                        </Label>
+                        <HBox prefHeight="40.0" prefWidth="572.0">
+                           <children>
+                              <Label prefHeight="27.0" prefWidth="80.0" text="Nome:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="bandName" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="40.0" prefWidth="572.0">
+                           <children>
+                              <Label prefHeight="27.0" prefWidth="80.0" text="Data criação:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="bandCreationDate" promptText="2024-01-01" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="40.0" prefWidth="572.0">
+                           <children>
+                              <Label prefHeight="27.0" prefWidth="80.0" text="Gênero:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="bandGender" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="40.0" prefWidth="572.0">
+                           <children>
+                              <Label prefHeight="27.0" prefWidth="80.0" text="Quantia:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="bandAmount" text="1" />
+                           </children>
+                        </HBox>
+                        <Button mnemonicParsing="false" onAction="#handleAddBand" text="Salvar">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="15.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox>
+               <children>
+                  <Label alignment="CENTER" prefHeight="35.0" prefWidth="696.0" text="Listagem de dados" textAlignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TabPane tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Músicas">
+                        <content>
+                          <AnchorPane>
+                                 <children>
+                                    <TableView fx:id="musicsTable" editable="true" layoutX="25.0" layoutY="22.0" prefHeight="400.0" prefWidth="638.0">
+                                      <columns>
+                                        <TableColumn fx:id="musicIdColumn" prefWidth="75.0" text="ID" />
+                                        <TableColumn fx:id="musicNameColumn" onEditCancel="#editCancel" onEditCommit="#editMusicName" onEditStart="#editStart" prefWidth="111.0" text="Nome" />
+                                          <TableColumn fx:id="musicBandNameColumn" prefWidth="113.0" text="Banda" />
+                                          <TableColumn fx:id="musicDurationColumn" onEditCancel="#editCancel" onEditCommit="#editMusicDuration" onEditStart="#editStart" prefWidth="92.0" text="Duração" />
+                                          <TableColumn fx:id="musicLinkColumn" minWidth="4.0" onEditCancel="#editCancel" onEditCommit="#editMusicLink" onEditStart="#editStart" prefWidth="124.0" text="Link" />
+                                          <TableColumn fx:id="musicActionColumn" prefWidth="119.0" text="Ações" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Bandas">
+                        <content>
+                          <AnchorPane>
+                                 <children>
+                                    <TableView fx:id="bandsTable" editable="true" layoutX="14.0" layoutY="11.0" prefHeight="400.0" prefWidth="659.0">
+                                      <columns>
+                                        <TableColumn fx:id="bandNameColumn" onEditCancel="#editCancel" onEditCommit="#editBandName" onEditStart="#editStart" prefWidth="150.0" text="Nome" />
+                                        <TableColumn fx:id="bandCreationDateColumn" minWidth="0.0" onEditCancel="#editCancel" onEditCommit="#editBandCreationDate" onEditStart="#editStart" prefWidth="159.0" text="Data criação" />
+                                          <TableColumn fx:id="bandGenderColumn" onEditCancel="#editCancel" onEditCommit="#editBandGender" onEditStart="#editStart" prefWidth="204.0" text="Gênero" />
+                                          <TableColumn fx:id="bandActionColumn" prefWidth="141.0" text="Ações" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

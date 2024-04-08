@@ -1,0 +1,11 @@
+com\po2\jukebox\Controller$3.class
+com\po2\jukebox\infra\BandDAO.class
+module-info.class
+com\po2\jukebox\App.class
+com\po2\jukebox\Controller.class
+com\po2\jukebox\infra\Database.class
+com\po2\jukebox\Controller$2.class
+com\po2\jukebox\infra\MusicDAO.class
+com\po2\jukebox\domain\Band.class
+com\po2\jukebox\Controller$1.class
+com\po2\jukebox\domain\Music.class
